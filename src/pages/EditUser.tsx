@@ -9,12 +9,6 @@ import { UserResultInterface } from "../interfaces/user.interface";
 export default function UpdateUser() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [firstname, setFirstname] = useState<string>("");
-  const [lastname, setLastname] = useState<string>("");
-  const [city, setCity] = useState<string>("");
-  const [number, setNumber] = useState<number>(0);
-  const [street, setStreet] = useState<string>("");
-  const [zipcode, setZipcode] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [user, setUser] = useState<UserResultInterface>({});
 
@@ -49,70 +43,67 @@ export default function UpdateUser() {
   };
   const handleFirstName = (e: any) => {
     const updatedFirstName = e.target.value;
-    setFirstname(updatedFirstName);
+
     setUser({
       ...user,
       name: {
         ...user.name,
-        firstname: firstname,
+        firstname: updatedFirstName,
       },
     });
   };
   const handleLastName = (e: any) => {
     const updatedLastName = e.target.value;
-    setLastname(updatedLastName);
 
     setUser({
       ...user,
       name: {
         ...user.name,
-        lastname: lastname,
+        lastname: updatedLastName,
       },
     });
   };
   const handleCity = (e: any) => {
     const updatedCity = e.target.value;
-    setCity(updatedCity);
+
     setUser({
       ...user,
       address: {
         ...user.address,
-        city: city,
+        city: updatedCity,
       },
     });
   };
   const handleStreet = (e: any) => {
     const updatedStreet = e.target.value;
-    setStreet(updatedStreet);
 
     setUser({
       ...user,
       address: {
         ...user.address,
-        street: street,
+        street: updatedStreet,
       },
     });
   };
   const handleNumber = (e: any) => {
     const updatedNumber = e.target.value;
-    setNumber(updatedNumber);
-    setUser({
-      ...user,
-      address: {
-        ...user.address,
-        number: number,
-      },
-    });
-  };
-  const handleZipCode = (e: any) => {
-    const updatedZipcode = e.target.value;
-    setZipcode(updatedZipcode);
 
     setUser({
       ...user,
       address: {
         ...user.address,
-        zipcode: zipcode,
+        number: updatedNumber,
+      },
+    });
+  };
+  const handleZipCode = (e: any) => {
+    const updatedZipcode = e.target.value;
+
+    setUser({
+      ...user,
+      address: {
+        ...user.address,
+        zipcode: updatedZipcode,
       },
     });
   };
