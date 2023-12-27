@@ -49,72 +49,72 @@ export default function UpdateUser() {
   };
   const handleFirstName = (e: any) => {
     const updatedFirstName = e.target.value;
+    setFirstname(updatedFirstName);
     setUser({
       ...user,
       name: {
         ...user.name,
-        firstname: updatedFirstName,
+        firstname: firstname,
       },
     });
-    setFirstname(updatedFirstName);
   };
   const handleLastName = (e: any) => {
     const updatedLastName = e.target.value;
+    setLastname(updatedLastName);
 
     setUser({
       ...user,
       name: {
         ...user.name,
-        lastname: updatedLastName,
+        lastname: lastname,
       },
     });
-    setLastname(updatedLastName);
   };
   const handleCity = (e: any) => {
     const updatedCity = e.target.value;
+    setCity(updatedCity);
     setUser({
       ...user,
       address: {
         ...user.address,
-        city: updatedCity,
+        city: city,
       },
     });
-    setCity(updatedCity);
   };
   const handleStreet = (e: any) => {
     const updatedStreet = e.target.value;
+    setStreet(updatedStreet);
 
     setUser({
       ...user,
       address: {
         ...user.address,
-        street: updatedStreet,
+        street: street,
       },
     });
-    setStreet(updatedStreet);
   };
   const handleNumber = (e: any) => {
     const updatedNumber = e.target.value;
+    setNumber(updatedNumber);
     setUser({
       ...user,
       address: {
         ...user.address,
-        number: updatedNumber,
+        number: number,
       },
     });
-    setNumber(updatedNumber);
   };
   const handleZipCode = (e: any) => {
     const updatedZipcode = e.target.value;
+    setZipcode(updatedZipcode);
 
     setUser({
       ...user,
       address: {
         ...user.address,
-        zipcode: updatedZipcode,
+        zipcode: zipcode,
       },
     });
-    setZipcode(updatedZipcode);
   };
 
   const handleSubmit = () => {

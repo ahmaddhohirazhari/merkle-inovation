@@ -37,7 +37,7 @@ export default function home() {
             <h1 className="text-[30px] font-bold">Our Team</h1>
             <button
               className=" border-blue-500 border text-blue-500 rounded-md p-2 cursor-pointer"
-              onClick={(e) => {
+              onClick={() => {
                 navigate("/add-user");
               }}
             >
