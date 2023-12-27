@@ -122,7 +122,7 @@ export default function UpdateUser() {
               timer: 1500,
             });
             setTimeout(() => {
-              navigate("/");
+              navigate("/users");
             }, 1500);
           }
         })
