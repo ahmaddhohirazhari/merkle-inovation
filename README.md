@@ -36,7 +36,7 @@ _Merkle Inovation App is a website Application buil with React Typescript. It ha
 ## Usage for development
 
 1. Open your terminal or command prompt.
-2. Type ` `
+2. Type `git clone https://github.com/ahmaddhohirazhari/merkle-inovation.git`
 3. Open folder with your text editor.
 4. Start to edit and development.
 5. Run npm i or yarn install on your terminal
