@@ -29,7 +29,7 @@ function Login() {
             timer: 1500,
           });
           setTimeout(() => {
-            navigate("/");
+            navigate("/users");
           }, 1500);
         }
       })
