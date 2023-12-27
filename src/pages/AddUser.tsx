@@ -52,7 +52,7 @@ export default function FormUser() {
           timer: 1500,
         });
         setTimeout(() => {
-          navigate("/");
+          navigate("/users");
         }, 2000);
       })
       .catch((error) => {
